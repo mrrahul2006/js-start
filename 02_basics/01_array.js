@@ -1,4 +1,4 @@
-// Array
+ao// Array
 const arr=[2,3,4,5,6,24,5];
 // javascript arrays are resizable and can hold any type of data
 const myhero = ["Ironman","Spiderman","Hulk","Thor"];
