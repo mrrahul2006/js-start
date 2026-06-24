@@ -1,6 +1,8 @@
 //Scope 
 //1.Block scope
 //2.Global scope
+//lexicsl function :- inner function can access outer variables 
+
 if(true){
     let a=30
     const b=49
@@ -16,3 +18,70 @@ if(true){
     console.log(`inner value ${a}`); //244
 }
 console.log(`outer value ${a}`); //40
+
+function one(){
+    const usernam="ratnakar";
+    function two(){
+        console.log(usernam)
+    }
+    two()
+}
+one()
+
+// ***************interesting*********
+console.log(addone(5))
+function addone(one){
+    return one+1;
+}
+
+//addtwo(5):- it will give error because it is function expression and it is not hoisted
+const addtwo=function(two){
+    return two+2;
+}
+//7
+
+const addthree=(three)=>{
+    return three+3;
+}
+addthree(5)//8
+
+//Closure 
+//:- function remembers variables fromn its outer scope even after outer funvction has finished execution 
+
+function outer(){
+    let count =0;
+    return function(){
+        count++;
+        console.log(count);
+    }
+}
+
+const counter = outer();
+counter();
+counter();
+counter();
+counter();
+
+function chai(){
+    let name="kumar";
+    console.log(this.name);//undefined
+}
+chai()
+
+
+// ***************arrow function *****************
+const addArrow = (num1,num2)=>{
+    return num1+num2;
+}
+
+// another method
+const arrfun=(num1,num2)=>(5,6);
+
+//***********iiefe********** */
+(function ch(){
+    console.log("hello");
+})();
+
+((name)=>{
+    console.log(`hello ${name}`);
+})('hitesh')
