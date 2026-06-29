@@ -85,3 +85,16 @@ const arrfun=(num1,num2)=>(5,6);
 ((name)=>{
     console.log(`hello ${name}`);
 })('hitesh')
+
+// javascript execution programming model
+
+// {}:-Global execution context(this=window)
+// javascript is single threaded language
+// Gobal execution context:- it is created when js file is loaded in browser
+// Function execution context:- it is created when function is invoked 
+// eval execution context:- it is created when eval() function is called
+
+
+//Phase of execution
+//1. creation phase:- memory is allocated for variables and functions
+//2. execution phase:- code is executed line by line    
